@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="relative hidden lg:flex justify-center items-center">
             <div className="card">
               <div className="loader">
-                <span style={{ color: 'teal' }}>We Build</span>
+                <span className="text-teal">We Build</span>
                 <div className="words">
                   <span className="word">ADS</span>
                   <span className="word">FUNNELS</span>
@@ -54,14 +54,14 @@ const Hero = () => {
             </div>
             <style>{`
               .card {
-                --bg-color: #fff;
+                --bg-color: hsl(var(--card));
                 background-color: var(--bg-color);
                 padding: 1rem 2rem;
                 border-radius: 1.25rem;
               }
 
               .loader {
-                color: #000;
+                color: hsl(var(--foreground));
                 font-family: "Poppins", sans-serif;
                 font-weight: 600;
                 font-size: 28px;
@@ -69,6 +69,10 @@ const Hero = () => {
                 align-items: center;
                 height: 40px;
                 gap: 6px;
+              }
+
+              .loader .text-teal {
+                color: hsl(var(--teal));
               }
 
               .words {
@@ -80,7 +84,7 @@ const Hero = () => {
               .word {
                 display: block;
                 height: 100%;
-                color: #000;
+                color: hsl(var(--foreground));
                 animation: spin_4991 6s infinite;
               }
 
