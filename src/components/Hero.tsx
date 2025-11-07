@@ -39,73 +39,79 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Right Illustration Placeholder */}
-          <div className="relative hidden lg:block">
-            <div className="relative w-full aspect-square">
-              {/* Mockup Cards */}
-              <div className="absolute top-0 right-0 w-80 bg-white rounded-2xl shadow-md p-6 border border-border">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-500"></div>
-                  <div className="flex-1 space-y-2">
-                    <div className="h-3 bg-muted rounded w-3/4"></div>
-                    <div className="h-2 bg-muted rounded w-1/2"></div>
-                  </div>
-                </div>
-                <div className="aspect-video bg-muted rounded-lg mb-4"></div>
-                <div className="h-10 bg-primary rounded-lg w-24"></div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 w-72 bg-teal-light/20 rounded-2xl p-6 border border-primary/20">
-                <div className="text-xs font-medium text-primary mb-2">Monthly Sales</div>
-                <div className="text-3xl font-bold text-foreground mb-1">$4,550.00</div>
-                <div className="text-sm text-primary mb-4">+14%</div>
-                
-                <div className="space-y-2">
-                  {[250, 189, 150, 128, 98].map((value, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">{5-i}</span>
-                      <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-primary rounded-full" 
-                          style={{width: `${(value/250)*100}%`}}
-                        ></div>
-                      </div>
-                      <span className="text-xs text-muted-foreground">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Google Ad Mockup */}
-              <div className="absolute top-20 right-20 w-64 bg-white rounded-xl shadow-sm p-4 border border-border">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-6 h-6 rounded bg-green-500"></div>
-                  <div className="flex-1 h-2 bg-muted rounded"></div>
-                </div>
-                <div className="space-y-2 mb-3">
-                  <div className="h-2 bg-muted rounded"></div>
-                  <div className="h-2 bg-muted rounded w-3/4"></div>
-                </div>
-                <div className="flex gap-2">
-                  <div className="flex-1 h-6 bg-primary/10 rounded"></div>
-                  <div className="flex-1 h-6 bg-primary/10 rounded"></div>
-                </div>
-              </div>
-
-              {/* Instagram Mockup */}
-              <div className="absolute bottom-32 right-32 w-48 bg-white rounded-xl shadow-sm p-3 border border-border">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500"></div>
-                  <div className="h-2 bg-muted rounded w-20"></div>
-                </div>
-                <div className="aspect-square bg-muted rounded-lg mb-2"></div>
-                <div className="flex gap-3">
-                  <div className="w-6 h-6 rounded-full border-2 border-foreground"></div>
-                  <div className="w-6 h-6 rounded-full border-2 border-foreground"></div>
-                  <div className="w-6 h-6 rounded-full border-2 border-foreground"></div>
+          {/* Right Animated Loader */}
+          <div className="relative hidden lg:flex justify-center items-center">
+            <div className="card">
+              <div className="loader">
+                <span className="text-teal">We Build</span>
+                <div className="words">
+                  <span className="word">ADS</span>
+                  <span className="word">FUNNELS</span>
+                  <span className="word">LEAD GEN SYSTEMS</span>
+                  <span className="word">ADS</span>
                 </div>
               </div>
             </div>
+            <style>{`
+              .card {
+                --bg-color: hsl(var(--card));
+                background-color: var(--bg-color);
+                padding: 1rem 2rem;
+                border-radius: 1.25rem;
+              }
+
+              .loader {
+                color: hsl(var(--foreground));
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                font-size: 28px;
+                display: flex;
+                align-items: center;
+                height: 40px;
+                gap: 6px;
+              }
+
+              .loader .text-teal {
+                color: hsl(var(--teal));
+              }
+
+              .words {
+                overflow: hidden;
+                position: relative;
+                height: 40px;
+              }
+
+              .word {
+                display: block;
+                height: 100%;
+                color: hsl(var(--foreground));
+                animation: spin_4991 6s infinite;
+              }
+
+              .words::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                  var(--bg-color) 10%,
+                  transparent 30%,
+                  transparent 70%,
+                  var(--bg-color) 90%
+                );
+                z-index: 10;
+              }
+
+              @keyframes spin_4991 {
+                10% { transform: translateY(-100%); }
+                25% { transform: translateY(-100%); }
+                35% { transform: translateY(-200%); }
+                50% { transform: translateY(-200%); }
+                60% { transform: translateY(-300%); }
+                75% { transform: translateY(-300%); }
+                85% { transform: translateY(-400%); }
+                100% { transform: translateY(-400%); }
+              }
+            `}</style>
           </div>
         </div>
       </div>
