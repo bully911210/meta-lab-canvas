@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  // Use relative paths for both dev and production to ensure GitHub Pages compatibility
   base: "./",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
