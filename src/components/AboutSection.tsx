@@ -1,5 +1,3 @@
-import franzPortrait from "@/assets/franz-portrait.jpg";
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 lg:py-32 bg-secondary">
@@ -41,7 +39,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden bg-card border border-border">
               <img
-                src={franzPortrait}
+                src="https://i.ibb.co/1JYvx2cK/a-professional-studio-portrait-captures-k-OLMADF2-Q-GWIDHXUubq2-Q-Fq-Oui-Hd-UTS6-Ktybxh59-R-Q-1.png"
                 alt="Franz Badenhorst"
                 className="w-full h-full object-cover"
               />
