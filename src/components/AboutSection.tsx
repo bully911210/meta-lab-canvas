@@ -2,66 +2,48 @@ import franzPortrait from "@/assets/franz-portrait.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-secondary/30">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+    <section id="about" className="py-24 lg:py-32 bg-secondary">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="flex-1 min-w-[350px]">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Built by an engineer,
-              <br />
-              <span className="text-gradient">not a marketer.</span>
+          <div>
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+              We're a full-service Meta powerhouse built for agility and impact.
             </h2>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-lg mb-8">
               <p>
-                I'm Franz Badenhorst, and I don't believe in fluffy marketing promises or
-                vanity metrics. I believe in systems, data, and repeatable processes that
-                compound results over time.
+                Fueled by technology and driven by data, we deliver cutting-edge Meta advertising solutions across creative, growth, analytics, and optimization.
               </p>
 
               <p>
-                After scaling Meta campaigns from startup budgets to seven-figure monthly
-                ad spends, I've learned that success isn't about creative genius or lucky
-                breaks—it's about engineering frameworks that turn advertising into a
-                predictable revenue channel.
-              </p>
-
-              <p>
-                LeadLabs was built on a simple principle: if you can't measure it, you
-                can't improve it. Every campaign is instrumented. Every decision is
-                data-driven. Every dollar is accountable.
-              </p>
-
-              <p className="text-foreground font-semibold">
-                This isn't marketing. It's revenue engineering.
+                Our structure is designed for speed, efficiency, and scalability—so you can stay ahead in an ever-evolving digital landscape.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <div className="flex-1 min-w-[140px] bg-card border border-border rounded-xl p-4 text-center">
-                <div className="text-2xl font-display font-bold text-gradient">8+</div>
-                <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center p-4 bg-background border border-border rounded-xl">
+                <div className="text-3xl font-display font-bold text-primary mb-1">8+</div>
+                <div className="text-xs text-muted-foreground">Years Experience</div>
               </div>
-              <div className="flex-1 min-w-[140px] bg-card border border-border rounded-xl p-4 text-center">
-                <div className="text-2xl font-display font-bold text-gradient">$12M+</div>
-                <div className="text-sm text-muted-foreground mt-1">Ad Spend Managed</div>
+              <div className="text-center p-4 bg-background border border-border rounded-xl">
+                <div className="text-3xl font-display font-bold text-primary mb-1">$12M+</div>
+                <div className="text-xs text-muted-foreground">Ad Spend Managed</div>
               </div>
-              <div className="flex-1 min-w-[140px] bg-card border border-border rounded-xl p-4 text-center">
-                <div className="text-2xl font-display font-bold text-gradient">50+</div>
-                <div className="text-sm text-muted-foreground mt-1">Brands Scaled</div>
+              <div className="text-center p-4 bg-background border border-border rounded-xl">
+                <div className="text-3xl font-display font-bold text-primary mb-1">50+</div>
+                <div className="text-xs text-muted-foreground">Brands Scaled</div>
               </div>
             </div>
           </div>
 
           {/* Image */}
-          <div className="flex-1 min-w-[350px] text-center">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl"></div>
+          <div className="relative">
+            <div className="aspect-square rounded-3xl overflow-hidden bg-card border border-border">
               <img
                 src={franzPortrait}
-                alt="Franz Badenhorst - Meta Revenue Engineer"
-                className="relative w-full max-w-[500px] rounded-3xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+                alt="Franz Badenhorst"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

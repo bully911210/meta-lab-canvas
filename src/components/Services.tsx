@@ -1,24 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const dfyFeatures = [
-  "Complete account setup & structure",
-  "Creative production & testing",
-  "Daily optimization & monitoring",
-  "Weekly strategy calls",
-  "Dedicated account manager",
-  "Guaranteed response SLA",
-];
-
-const dwyFeatures = [
-  "System audit & roadmap",
-  "Strategy workshops",
-  "SOPs & documentation",
-  "Team training & enablement",
-  "Ongoing advisory access",
-  "Performance review sessions",
-];
-
 const Services = () => {
   const scrollToCTA = () => {
     const element = document.getElementById("cta");
@@ -28,82 +10,88 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-secondary/30">
-      <div className="max-w-[1440px] mx-auto">
+    <section id="services" className="py-24 lg:py-32 bg-secondary">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Choose Your <span className="text-gradient">Engagement Model</span>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+            More than just another ad agency.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you need full execution or strategic guidance, we have a model designed for your growth stage.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Confusing campaigns lose money. We engineer Meta revenue systems that feel effortless.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* DFY Service */}
-          <div className="flex-1 min-w-[320px] max-w-[500px] bg-card border border-border rounded-3xl p-10 transition-all duration-300 hover:border-primary/50 hover:scale-[1.02] shadow-card">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-              <span className="text-sm font-semibold text-primary">Most Popular</span>
+          <div className="bg-background border border-border rounded-3xl p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div className="mb-6">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                Done-For-You
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Hand off your Meta advertising completely. We build, manage, and optimize your entire system.
+              </p>
             </div>
-            
-            <h2 className="text-3xl font-display font-bold mb-4">
-              Done-For-You
-            </h2>
-            
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              Hand off your Meta advertising completely. We build, manage, and optimize your entire system while you focus on fulfillment and growth.
-            </p>
 
-            <div className="space-y-4 mb-8">
-              {dfyFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                    <Check className="w-3 h-3 text-primary" />
+            <ul className="space-y-4 mb-8">
+              {[
+                "Complete account setup & structure",
+                "Creative production & testing",
+                "Daily optimization & monitoring",
+                "Weekly strategy calls",
+                "Dedicated account manager",
+                "Guaranteed response SLA",
+              ].map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <span className="text-foreground">{feature}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <Button
               onClick={scrollToCTA}
-              className="w-full bg-primary hover:bg-accent text-primary-foreground font-semibold py-6 rounded-xl transition-all duration-300"
-              size="lg"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full py-6"
             >
               Get Started
             </Button>
           </div>
 
           {/* DWY Service */}
-          <div className="flex-1 min-w-[320px] max-w-[500px] bg-card border border-border rounded-3xl p-10 transition-all duration-300 hover:border-accent/50 hover:scale-[1.02] shadow-card">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-              <span className="text-sm font-semibold text-accent">For Teams</span>
+          <div className="bg-background border border-border rounded-3xl p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div className="mb-6">
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                Done-With-You
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Build internal capability with expert guidance. We architect the system, train your team, and provide strategic support.
+              </p>
             </div>
-            
-            <h2 className="text-3xl font-display font-bold mb-4">
-              Done-With-You
-            </h2>
-            
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              Build internal capability with expert guidance. We architect the system, train your team, and provide ongoing strategic support.
-            </p>
 
-            <div className="space-y-4 mb-8">
-              {dwyFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5">
-                    <Check className="w-3 h-3 text-accent" />
+            <ul className="space-y-4 mb-8">
+              {[
+                "System audit & roadmap",
+                "Strategy workshops",
+                "SOPs & documentation",
+                "Team training & enablement",
+                "Ongoing advisory access",
+                "Performance review sessions",
+              ].map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <span className="text-foreground">{feature}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <Button
               onClick={scrollToCTA}
               variant="outline"
-              className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold py-6 rounded-xl transition-all duration-300"
-              size="lg"
+              className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-full py-6"
             >
               Learn More
             </Button>

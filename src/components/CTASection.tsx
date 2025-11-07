@@ -15,21 +15,19 @@ const CTASection = () => {
   };
 
   return (
-    <section id="cta" className="section-padding relative overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-accent"></div>
-      
-      {/* Glow Effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+    <section id="cta" className="py-24 lg:py-32 bg-primary text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-          Ready to engineer your revenue?
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+          Are you ready for better results?
         </h2>
         
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12">
-          Book a free audit. We'll analyze your current setup, identify bottlenecks, and show you exactly how we'd scale your system.
+        <p className="text-xl mb-12 opacity-90 leading-relaxed">
+          Let's Talk
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -40,19 +38,19 @@ const CTASection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60 backdrop-blur-sm h-14 text-lg"
+              className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60 backdrop-blur-sm h-12 rounded-full px-6"
             />
             <Button
               type="submit"
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 h-14 text-lg whitespace-nowrap"
+              className="bg-white text-primary hover:bg-white/90 font-medium rounded-full px-8 h-12 whitespace-nowrap"
             >
               Book Audit
             </Button>
           </div>
         </form>
 
-        <p className="text-sm text-white/70 mt-6">
+        <p className="text-sm mt-6 opacity-75">
           No fluff. No sales pitch. Just data and strategy.
         </p>
       </div>

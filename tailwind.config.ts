@@ -57,12 +57,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        "bg-dark": "hsl(var(--bg-dark))",
-        "bg-darker": "hsl(var(--bg-darker))",
-        "bg-card": "hsl(var(--bg-card))",
-        "text-primary": "hsl(var(--text-primary))",
-        "text-secondary": "hsl(var(--text-secondary))",
-        "border-subtle": "hsl(var(--border-subtle))",
+        teal: "hsl(var(--teal))",
+        "teal-light": "hsl(var(--teal-light))",
+        "teal-dark": "hsl(var(--teal-dark))",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -70,15 +67,11 @@ export default {
         body: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-cta': 'var(--gradient-cta)',
+        'gradient-teal': 'var(--gradient-teal)',
       },
       boxShadow: {
-        glow: 'var(--shadow-glow)',
-        card: 'var(--shadow-card)',
-      },
-      transitionTimingFunction: {
-        smooth: 'var(--transition-smooth)',
+        sm: 'var(--shadow-sm)',
+        md: 'var(--shadow-md)',
       },
       borderRadius: {
         lg: "var(--radius)",

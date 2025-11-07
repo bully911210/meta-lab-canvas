@@ -1,88 +1,61 @@
-import { TrendingUp, DollarSign, Users, Zap } from "lucide-react";
-
-const caseStudies = [
-  {
-    icon: DollarSign,
-    company: "E-Commerce Brand",
-    industry: "Fashion",
-    metric: "$847K Revenue",
-    result: "From $0 to $847K in 6 months",
-    improvement: "4.2x ROAS",
-  },
-  {
-    icon: TrendingUp,
-    company: "SaaS Platform",
-    industry: "B2B Software",
-    metric: "312% Growth",
-    result: "Lead quality improved 89%",
-    improvement: "CAC reduced by 52%",
-  },
-  {
-    icon: Users,
-    company: "Education Company",
-    industry: "Online Courses",
-    metric: "2.3K Students",
-    result: "Scaled to 2.3K enrollments/mo",
-    improvement: "CPA down to $47",
-  },
-  {
-    icon: Zap,
-    company: "Service Business",
-    industry: "Home Services",
-    metric: "5.8x Scale",
-    result: "Ad spend scaled from $8K to $47K/mo",
-    improvement: "Maintained 3.1x ROAS",
-  },
+const clients = [
+  "E-Commerce Brand", "SaaS Platform", "Education Co", "Service Business",
+  "Tech Startup", "Health & Wellness", "Financial Services", "Real Estate",
 ];
 
 const ProofSection = () => {
   return (
-    <section id="proof" className="section-padding bg-background">
-      <div className="max-w-[1440px] mx-auto">
+    <section id="proof" className="py-24 lg:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Results That <span className="text-gradient">Scale</span>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+            Your growth, our obsession.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real businesses. Real growth. Engineering beats guesswork every time.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Your goals, our data-driven strategy, a team fueled by passion. That's the LeadLabs formula for unstoppable Meta revenue growth.
           </p>
         </div>
 
-        <div className="overflow-x-auto pb-4 -mx-5 px-5">
-          <div className="flex gap-6 min-w-max md:grid md:grid-cols-2 lg:grid-cols-4 md:min-w-0">
-            {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-[340px] md:w-auto bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:border-primary/50 shadow-card"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 mb-6">
-                  <study.icon className="w-6 h-6 text-primary" />
-                </div>
-
-                <div className="mb-2">
-                  <div className="text-sm text-muted-foreground">{study.industry}</div>
-                  <h3 className="text-xl font-display font-bold text-primary mt-1">
-                    {study.company}
-                  </h3>
-                </div>
-
-                <div className="my-6">
-                  <div className="text-3xl font-display font-bold text-gradient mb-2">
-                    {study.metric}
-                  </div>
-                  <div className="text-sm text-foreground">{study.result}</div>
-                </div>
-
-                <div className="pt-4 border-t border-border">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20">
-                    <span className="text-xs font-semibold text-accent">
-                      {study.improvement}
-                    </span>
-                  </div>
-                </div>
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {[
+            { value: "$2.4M+", label: "Revenue Generated" },
+            { value: "3.2x", label: "Average ROAS" },
+            { value: "47%", label: "Cost Reduction" },
+            { value: "12+", label: "Active Clients" },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl lg:text-5xl font-display font-bold text-primary mb-2">
+                {stat.value}
               </div>
-            ))}
-          </div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Client Logos */}
+        <div className="text-center mb-8">
+          <h3 className="text-xl font-display font-bold text-foreground mb-2">
+            Why Choose LeadLabs?
+          </h3>
+          <p className="text-sm text-muted-foreground mb-8">Some of our clients</p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {clients.map((client, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center h-20 bg-card border border-border rounded-xl px-4 text-center"
+            >
+              <span className="text-sm font-medium text-muted-foreground">
+                {client}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-8">
+          <p className="text-sm text-muted-foreground">And 100+ other companies</p>
         </div>
       </div>
     </section>
