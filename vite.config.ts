@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === "production" ? "/meta-lab-canvas/" : "/",
+  // Use relative paths for both dev and production to ensure GitHub Pages compatibility
+  base: "./",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
