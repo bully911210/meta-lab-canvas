@@ -35,13 +35,13 @@ const systems = [
 
 const SystemOverview = () => {
   return (
-    <section id="system" className="py-28 lg:py-40 bg-background">
+    <section id="system" className="py-32 lg:py-44 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+        <div className="text-center mb-20 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-6xl font-display font-bold text-foreground mb-8 leading-[1.15]">
             Achieve all your Meta growth goals in one place.
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Forget fluffy marketing plans. We create Meta revenue systems that deliver real growth. Our team handles all the technical optimization so you can focus on what you do best — making money.
           </p>
         </div>
@@ -50,13 +50,13 @@ const SystemOverview = () => {
           {systems.map((system, index) => (
             <div
               key={index}
-              className="group bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+              className="group bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors">
-                <system.icon className="w-6 h-6 text-primary" />
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <system.icon className="w-7 h-7 text-primary" />
               </div>
               
-              <h3 className="text-xl font-display font-bold text-foreground mb-3">
+              <h3 className="text-xl font-display font-bold text-foreground mb-4">
                 {system.title}
               </h3>
               
