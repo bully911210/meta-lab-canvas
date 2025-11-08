@@ -2,7 +2,9 @@ import { Mail, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background">
+      {/* Subtle divider line */}
+      <div className="border-t border-border"></div>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -76,10 +78,10 @@ const Footer = () => {
             © {new Date().getFullYear()} LeadLabs. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary hover:underline transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary hover:underline transition-colors">
               Terms of Service
             </a>
           </div>

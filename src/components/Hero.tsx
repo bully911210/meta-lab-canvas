@@ -33,9 +33,9 @@ const Hero = () => {
             <Button
               onClick={scrollToCTA}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all"
+              className="bg-primary hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 text-primary-foreground font-medium rounded-xl px-8 py-6 text-base shadow-md hover:shadow-lg transition-all duration-300"
             >
-              What we do best
+              What We Do Best
             </Button>
           </div>
 
