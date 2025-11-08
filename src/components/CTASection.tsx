@@ -15,14 +15,14 @@ const CTASection = () => {
   };
 
   return (
-    <section id="cta" className="py-24 lg:py-32 bg-primary text-white relative overflow-hidden">
+    <section id="cta" className="py-28 lg:py-40 bg-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+        <h2 className="text-3xl lg:text-6xl font-display font-bold mb-6 leading-tight">
           Are you ready for better results?
         </h2>
         
@@ -38,12 +38,12 @@ const CTASection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60 backdrop-blur-sm h-12 rounded-full px-6"
+              className="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60 backdrop-blur-sm h-12 rounded-xl px-6"
             />
             <Button
               type="submit"
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-medium rounded-full px-8 h-12 whitespace-nowrap"
+              className="bg-white text-primary hover:bg-gradient-to-r hover:from-purple-100 hover:to-indigo-100 font-medium rounded-xl px-8 h-12 whitespace-nowrap transition-all duration-300"
             >
               Book Audit
             </Button>

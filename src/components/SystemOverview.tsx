@@ -35,10 +35,10 @@ const systems = [
 
 const SystemOverview = () => {
   return (
-    <section id="system" className="py-24 lg:py-32 bg-background">
+    <section id="system" className="py-28 lg:py-40 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
             Achieve all your Meta growth goals in one place.
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">

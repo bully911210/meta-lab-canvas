@@ -61,9 +61,9 @@ const Navigation = () => {
 
         <Button
           onClick={() => scrollToSection("cta")}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-6"
+          className="bg-primary hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 text-primary-foreground font-medium rounded-xl px-6 py-3 transition-all duration-300"
         >
-          Work with us
+          Work With Us
         </Button>
       </div>
     </nav>

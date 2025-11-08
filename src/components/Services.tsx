@@ -10,10 +10,10 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-secondary">
+    <section id="services" className="py-28 lg:py-40 bg-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
             More than just another ad agency.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -53,7 +53,7 @@ const Services = () => {
 
             <Button
               onClick={scrollToCTA}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full py-6"
+              className="w-full bg-primary hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 text-primary-foreground font-medium rounded-xl py-6 transition-all duration-300"
             >
               Get Started
             </Button>
@@ -91,7 +91,7 @@ const Services = () => {
             <Button
               onClick={scrollToCTA}
               variant="outline"
-              className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-full py-6"
+              className="w-full border-primary text-primary hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 hover:text-white hover:border-transparent font-medium rounded-xl py-6 transition-all duration-300"
             >
               Learn More
             </Button>
