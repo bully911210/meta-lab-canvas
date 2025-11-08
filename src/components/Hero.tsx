@@ -11,37 +11,22 @@ const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="max-w-xl">
-            <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-primary bg-teal-light/30 px-3 py-1.5 rounded-full">
-                LeadLabs – Meta Revenue Engineering
-              </span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
-              I don't run ads.
-              <br />
-              I engineer systems.
-            </h1>
-            
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Your Meta campaigns aren't crushing it? LeadLabs builds revenue systems that actually get results.
-            </p>
-
-            <Button
-              onClick={scrollToCTA}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all"
-            >
-              What we do best
-            </Button>
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-block mb-4">
+            <span className="text-sm font-medium text-primary bg-teal-light/30 px-3 py-1.5 rounded-full">
+              LeadLabs – Meta Revenue Engineering
+            </span>
           </div>
-
-          {/* Right Animated Loader */}
-          <div className="relative hidden lg:flex justify-center items-center">
-            <div className="card">
+          
+          <h1 className="text-5xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
+            I don't run ads.
+            <br />
+            I engineer systems.
+          </h1>
+          
+          {/* Animated Loader - Own Row */}
+          <div className="mb-8">
+            <div className="card inline-block">
               <div className="loader">
                 <span className="text-teal">We Build</span>
                 <div className="words">
@@ -69,6 +54,7 @@ const Hero = () => {
                 align-items: center;
                 height: 40px;
                 gap: 6px;
+                white-space: nowrap;
               }
 
               .loader .text-teal {
@@ -79,6 +65,7 @@ const Hero = () => {
                 overflow: hidden;
                 position: relative;
                 height: 40px;
+                white-space: nowrap;
               }
 
               .word {
@@ -86,6 +73,7 @@ const Hero = () => {
                 height: 100%;
                 color: hsl(var(--foreground));
                 animation: spin_4991 6s infinite;
+                white-space: nowrap;
               }
 
               .words::after {
@@ -113,6 +101,14 @@ const Hero = () => {
               }
             `}</style>
           </div>
+
+          <Button
+            onClick={scrollToCTA}
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all"
+          >
+            What we do best
+          </Button>
         </div>
       </div>
     </section>
