@@ -1,11 +1,11 @@
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-secondary">
+    <section id="about" className="py-28 lg:py-40 bg-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
               We're a full-service Meta powerhouse built for agility and impact.
             </h2>
 
@@ -25,7 +25,7 @@ const AboutSection = () => {
                 <div className="text-xs text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-background border border-border rounded-xl">
-                <div className="text-3xl font-display font-bold text-primary mb-1">$12M+</div>
+                <div className="text-3xl font-display font-bold text-primary mb-1">R12M+</div>
                 <div className="text-xs text-muted-foreground">Ad Spend Managed</div>
               </div>
               <div className="text-center p-4 bg-background border border-border rounded-xl">
