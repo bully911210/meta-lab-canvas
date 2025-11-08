@@ -70,8 +70,11 @@ export default {
         'gradient-teal': 'var(--gradient-teal)',
       },
       boxShadow: {
-        sm: 'var(--shadow-sm)',
-        md: 'var(--shadow-md)',
+        sm: '0 1px 3px 0 rgb(0 0 0 / 0.05)',
+        md: '0 4px 12px 0 rgb(0 0 0 / 0.08)',
+        lg: '0 10px 30px 0 rgb(0 0 0 / 0.1)',
+        xl: '0 20px 50px 0 rgb(0 0 0 / 0.12)',
+        '2xl': '0 25px 60px 0 rgb(0 0 0 / 0.15)',
       },
       borderRadius: {
         lg: "var(--radius)",

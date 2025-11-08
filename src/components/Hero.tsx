@@ -9,31 +9,31 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-background overflow-hidden">
+    <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left Content */}
           <div className="max-w-xl">
-            <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-primary bg-teal-light/30 px-3 py-1.5 rounded-full">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-semibold text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
                 LeadLabs – Meta Revenue Engineering
               </span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-7xl font-display font-bold text-foreground mb-8 leading-[1.1]">
               I don't run ads.
               <br />
               I engineer systems.
             </h1>
             
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
               Your Meta campaigns aren't crushing it? LeadLabs builds revenue systems that actually get results.
             </p>
 
             <Button
               onClick={scrollToCTA}
               size="lg"
-              className="bg-primary hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 text-primary-foreground font-medium rounded-xl px-8 py-6 text-base shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg px-10 py-7 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
             >
               What We Do Best
             </Button>
@@ -56,8 +56,10 @@ const Hero = () => {
               .card {
                 --bg-color: hsl(var(--card));
                 background-color: var(--bg-color);
-                padding: 1rem 2rem;
-                border-radius: 1.25rem;
+                padding: 1.5rem 2.5rem;
+                border-radius: 1rem;
+                box-shadow: 0 10px 40px hsl(0 0% 0% / 0.1);
+                border: 1px solid hsl(var(--border));
               }
 
               .loader {
@@ -68,11 +70,11 @@ const Hero = () => {
                 display: flex;
                 align-items: center;
                 height: 40px;
-                gap: 6px;
+                gap: 8px;
               }
 
               .loader .text-teal {
-                color: hsl(var(--teal));
+                color: hsl(var(--primary));
               }
 
               .words {
